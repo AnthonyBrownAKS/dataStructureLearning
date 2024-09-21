@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复建内容</title>
+
+    <style>
+        .container {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            height: 200px; /* 设置容器的高度 */
+            white-space: pre-wrap; /* 保留换行符 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="textContainer"></div>
+<script>
+    // 4、文字的输出
+    // JavaScript代码，用于动态生成h1元素并插入到页面中
+    function createH1Text(text, times) {
+        const container = document.getElementById('textContainer');
+        for (let i = 0; i < times; i++) {
+            const h1 = document.createElement('h1');
+            h1.textContent = text;
+            container.innerHTML = h1.join("<br>");
+            container.appendChild(h1);
+        }
+    }
+    // 调用函数，创建3个h1元素，每个显示"学海无涯，苦作舟!"
+    createH1Text('学海无涯，苦作舟!', 3);
+
+</script>
+</body>
+</html>

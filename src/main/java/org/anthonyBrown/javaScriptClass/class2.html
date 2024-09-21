@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javasciptclass2</title>
+</head>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+    }
+</style>
+<body>
+
+
+<div id="output1"></div> <!-- 用于显示star -->
+<div id="output2"></div> <!-- 用于显示pyramid -->
+<table id="output3"></table> <!-- 用于显示乘法表 -->
+
+<script>
+    // 直角三角形
+    const output1 = document.getElementById('output1');
+    const sum = prompt("请输入生成的三角形层数");
+    let star = '*';
+    for (let i = 0; i < sum; i++) {
+        output1.innerHTML += star + '<br>'; // 打印
+        star += '**' // 迭代
+    }
+
+    // 金字塔
+    const output2 = document.getElementById('output2');
+    const sum = prompt("请输入生成的金字塔层数");
+    let sand = '*';
+    for (let i = 1; i <= sum; i++) {
+        // 创建每一行：先填充空格，再填充沙子
+        let spaces = '&nbsp'.repeat(sum - i);  // 空格
+        let sand = '*'.repeat(2 * i - 1);  // 沙子
+        output2.innerHTML += spaces + sand + '<br>'
+    }
+
+    // 九九乘法表
+    const table = document.getElementById('output3');
+    for (let i = 1; i <= 9; i++) {
+        const row = document.createElement('tr'); // 创建一行
+        for (let j = 1; j <= 9; j++) {
+            if (j <= i){
+                const cell = document.createElement('td'); // 创建一个单元格
+                cell.innerHTML = `${i} × ${j} = ${i * j}`; // 设置单元格内容
+                row.appendChild(cell); // 将单元格添加到行中
+            }
+        }
+        table.appendChild(row); // 将行添加到表格中
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class2</title>
+</head>
+<body>
+<script>
+    // // 1、矩阵转置
+    // // 创建矩阵
+    // const arr = [
+    //     ['a', 'b', 'c'],
+    //     ['d', 'e', 'f'],
+    //     ['g', 'h', 'i'],
+    //     ['j', 'k', 'l']
+    // ];
+    // const res =[];
+    // // 转置
+    // for (let i = 0; i < arr[0].length; i++) {
+    //     res[i] = [];
+    //     for (let j = 0; j < arr.length; j++) {
+    //       res[i][j] = arr[j][i];
+    //     }
+    // }
+    // console.log(arr);
+    // console.log(res);
+
+    // 2、冒泡排序
+    // 创建数组
+    // const arr = [5, 2, 9, 1, 5, 6];
+    // console.log(arr);
+    // const n = arr.length;
+    // // 外循环控制排序轮数
+    // for (let i = 0; i < n - 1; i++) {
+    //     // 内循环进行相邻元素比较
+    //     for (let j = 0; j < n - 1 - i; j++) {
+    //         if (arr[j] > arr[j + 1]) {
+    //             // 交换
+    //             const temp = arr[j];
+    //             arr[j] = arr[j + 1];
+    //             arr[j + 1] = temp;
+    //         }
+    //     }
+    // }
+    // console.log(arr);
+
+//  3、成绩表
+    const ming = [85, 89, 91, 82, 77];
+    const lan = [95, 74, 85, 86, 83];
+    const hong = [76, 84, 68, 93, 84];
+
+    let ming_sum =0;
+    let lan_sum =0;
+    let hong_sum =0;
+
+    for (let i = 0; i < ming.length; i++) {
+        ming_sum += ming[i];
+        lan_sum += lan[i];
+        hong_sum += hong[i];
+    }
+    console.log(ming_sum,lan_sum,hong_sum);
+
+
+
+
+</script>
+</body>
+</html>

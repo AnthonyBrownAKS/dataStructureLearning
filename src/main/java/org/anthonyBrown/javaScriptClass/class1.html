@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javaScript实训作业1</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: center; /* 水平居中 */
+        height: 200px; /* 设置容器的高度 */
+        white-space: pre-wrap; /* 保留换行符 */
+    }
+</style>
+<body>
+<div class="container" id="textContainer"></div>
+<script>
+
+    // 1、左右手餐具的交换
+    var leftHand = '刀';
+    var rightHand = '叉子';
+    var temp;
+
+    temp = leftHand;
+    leftHand = rightHand;
+    rightHand = temp;
+
+    console.log("左手:"+leftHand +','+'右手:'+rightHand)
+
+    // 2、获取用户信息
+    // 信息
+    const name = prompt('请输入您的姓名:');
+    const age = prompt('请输入您的年龄:');
+    const gender = prompt('请输入您的性别:');
+
+    // 打印到控制台
+    console.log('姓名:', name);
+    console.log('年龄:', age);
+    console.log('性别:', gender);
+
+
+    // 3、增加年龄
+    // 询问
+    const age = prompt('你现在多少岁了?')
+    var ageAdd = Number(ageInput) + 5
+
+    // 输出
+    console.log(`据我估计，五年后，你可能${ageAdd}岁了`)
+
+    // 4、文字的输出
+    // JavaScript代码，用于动态生成h1元素并插入到页面中
+    function createH1Text(text, times) {
+        const container = document.getElementById('textContainer');
+        for (let i = 0; i < times; i++) {
+            const h1 = document.createElement('h1');
+            h1.textContent = text;
+            container.innerHTML = h1.join("<br>");
+            container.appendChild(h1);
+        }
+    }
+
+    // 调用函数，创建3个h1元素，每个显示"学海无涯，苦作舟!"
+    createH1Text('学海无涯，苦作舟!', 3);
+</script>
+</body>
+</html>
